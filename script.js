@@ -1,5 +1,6 @@
 const choices = document.querySelectorAll('button')
 const userChoice = document.getElementById('user-choice')
+const computerChoice = document.getElementById('computer-choice')
 let selectedChoice
 
 choices.forEach(choice => choice.addEventListener('click', (e) => {
@@ -10,5 +11,13 @@ choices.forEach(choice => choice.addEventListener('click', (e) => {
 
 function generateComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3) + 1
-    console.log(randomNumber)
+    
+    if (randomNumber === 1) {
+        generatedComputerChoice = 'rock'
+    } else if (randomNumber === 2) {
+        generatedComputerChoice = 'paper'
+    } else {
+        generatedComputerChoice = 'scissors'
+    }
+    computerChoice.innerHTML = generatedComputerChoice
 }
