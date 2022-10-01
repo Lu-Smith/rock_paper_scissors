@@ -124,3 +124,45 @@ footer a:hover {
     color: #285058;  
     transform: translateY(-5px);
 }
+
+.start-color-rock {
+    display: inline-block;
+    opacity: 0;
+    transition: all 0.8s ease;
+    transform: scaleX(20%);
+    color: black;
+}
+
+.start-color-paper {
+    display: inline-block;
+    opacity: 0;
+    transition: all 0.8s ease;
+    transform: scaleX(20%);
+    color: rgb(39, 38, 38);
+}
+
+.start-color-scissors {
+    display: inline-block;
+    opacity: 0;
+    transition: all 0.8s ease;
+    transform: scaleX(20%);
+    color: rgb(80, 79, 79);
+}
+
+.end-color-rock {
+    opacity: 0.9;
+    transform: scaleX(100%);
+    color: #79C2D0
+}
+
+.end-color-paper {
+    opacity: 0.9;
+    transform: scaleX(100%);
+    color: #639eaa
+}
+
+.end-color-scissors {
+    opacity: 0.9;
+    transform: scaleX(100%);
+    color: #49727a
+}
