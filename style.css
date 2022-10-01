@@ -59,8 +59,8 @@ h2 div {
 
 h3 {
     padding: 10px 20px;
-    font-size: 30px;
-    line-height: 35px;
+    font-size: 40px;
+    line-height: 45px;
     color:  #7BB740;
     width: 20%;
 }
@@ -97,7 +97,7 @@ button {
 
 h2 span {
     position: relative;
-    top: 30px;
+    top: 60px;
     font-size: 30px;
     line-height: 40px;
     
