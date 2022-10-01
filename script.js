@@ -8,7 +8,13 @@ let gameResult
 
 choices.forEach(choice => choice.addEventListener('click', (e) => {
     selectedChoice = e.target.id
-    userChoice.innerHTML = selectedChoice
+    if (selectedChoice  === 'rock') {
+        userChoice.innerHTML = '<img src="media/rock.png" class="choiceImages"/>'
+    } else if (selectedChoice  === 'scissors') {
+        userChoice.innerHTML = '<img src="media/scissors.png" class="choiceImages"/>'
+    } else {
+        userChoice.innerHTML = '<img src="media/paper.png" class="choiceImages"/>'
+    }
     generateComputerChoice()
     gerResults()
 }))
@@ -17,22 +23,24 @@ function generateComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3) + 1
     
     if (randomNumber === 1) {
-        generatedComputerChoice = 'rock'
+        generatedComputerChoice = '<img src="media/rock.png" class="choiceImages"/>'
     } else if (randomNumber === 2) {
-        generatedComputerChoice = 'paper'
+        generatedComputerChoice = '<img src="media/paper.png" class="choiceImages"/>'
     } else {
-        generatedComputerChoice = 'scissors'
+        generatedComputerChoice = '<img src="media/scissors.png" class="choiceImages"/>'
     }
 
     computerChoice.innerHTML = generatedComputerChoice
 }
 
 function gerResults() {
-    if (generatedComputerChoice === selectedChoice) {
+    if (generatedComputerChoice === '<img src="media/rock.png" class="choiceImages"/>' && selectedChoice === 'rock' ||
+    generatedComputerChoice === '<img src="media/paper.png" class="choiceImages"/>' && selectedChoice === 'paper' ||
+    generatedComputerChoice === '<img src="media/scissors.png" class="choiceImages"/>' && selectedChoice === 'scissors') {
         gameResult = "It's a draw"
-    } else if (generatedComputerChoice === 'rock' && selectedChoice === 'paper' ||
-    generatedComputerChoice === 'paper' && selectedChoice === 'scissors' ||
-    generatedComputerChoice === 'scissors' && selectedChoice === 'rock'
+    } else if (generatedComputerChoice === '<img src="media/rock.png" class="choiceImages"/>' && selectedChoice === 'paper' ||
+    generatedComputerChoice === '<img src="media/paper.png" class="choiceImages"/>' && selectedChoice === 'scissors' ||
+    generatedComputerChoice === '<img src="media/scissors.png" class="choiceImages"/>' && selectedChoice === 'rock'
     ) {
         gameResult = "You won 🥳"
     } else {
